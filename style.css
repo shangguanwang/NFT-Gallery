@@ -1,0 +1,126 @@
+/* change the font */
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+/*============== Header Transition In =============*/
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    animation:transitionIn 3s;
+    margin-bottom: 3rem; /*create some space below */
+    text-align: center;
+}
+
+header p {
+    font-size:20px;
+    margin-left: 10px;
+}
+
+/*================= Image Grid Formatting ==================*/
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr; /*make each column space evenly */
+    gap:20px;
+}
+
+.column {
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.grid img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/*get all image into one column when the screen is smaller */
+@media(max-width:768px) {
+    .grid {
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+/*================= Image Shadow Overlay ===============*/
+.grid-item {
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item-overlay {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end; /*put the text at the bottom of the image */
+    align-items: center;
+    opacity:0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*make an overlay special case for the video so user can still play */
+.grid-item-overlay-half {
+    position:absolute;
+    top:0;
+    width:95%;
+    height:12%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start; /*put the text at the bottom of the image */
+    align-items: center;
+    opacity:0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.grid-item:hover .grid-item-overlay, .grid-item:hover .grid-item-overlay-half {
+    opacity:1;
+    cursor: pointer; /*change mouse cursor into a hand pointer */
+}
+
+.art-name a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+.art-name a:hover {
+    text-decoration:underline;
+}
+/*================= Footer =====================*/
+.footer-links {
+    display:flex;
+    align-items: center; /*keep everything inside the container on the same line */
+}
+/*remove the hyperlink underline and change the footer text color */
+footer a {
+    text-decoration: none;
+    color:gray;
+    margin-right:20px; /*make some spaces between the links */
+    margin-left:10px;
+}
+
+footer p {
+    color: darkgray;
+    margin-left:auto; /*keep p to the right */
+    margin-right:20px;
+}
+
+/*make the footer stand out as you hover over */
+footer a:hover {
+    color:black;
+}
+
