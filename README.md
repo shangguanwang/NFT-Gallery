@@ -1,5 +1,5 @@
 # NFT-Gallery
-Showcase my NFT Art Collection in Masonry Layout.
+Showcase my NFT Art Collection in Masonry Layout. You can check out it <a href="https://shangguanwang.github.io/NFT-Gallery/">live here</a>
 
 ## Why I built this:
 I was at ETHDenver 2023 Conference, and I found people intrigued about what I do as an NFT art collector. Since one picture is better than a thousand words, I built this gallery to showcase my top pick NFT art collections. This is also a great opportunity to sharpen my HTML and CSS skills after completing the responsive web design course on freeCodeCamp.
